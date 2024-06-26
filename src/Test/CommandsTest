@@ -1,0 +1,26 @@
+using YTText;
+
+namespace YTTextTest;
+
+public class CommandsTest{
+    [SetUp]
+    public void Setup()
+    {
+    }
+
+    [TearDown]
+    public void TearDown()
+    {
+    }
+
+    [Test]
+    public void Commands_ValidLink_MustBeSet{
+        // Arrange
+        Uri testLink = new Uri(@"http://microsoft.com");
+        // Act
+        Commands.GetParams(testlink)
+        // Assert
+        Assert.IsNotNull(Commands.YTLink);
+
+    } 
+}
