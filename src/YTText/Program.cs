@@ -15,12 +15,10 @@ public class Program
     {
         ConsoleApp.Run(args, Commands.GetParams);
 
-        
-
         Process(Commands.YTLink.ToString(), "ytdefault");
     }
 
-    internal static void Process(string ytLink, string filesName)
+    public static void Process(string ytLink, string filesName)
     {
         string videoFilePath = filesName + ".mp4";
         string audioFilePath = filesName + ".wav";
